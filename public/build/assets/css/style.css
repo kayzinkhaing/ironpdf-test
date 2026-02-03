@@ -1,0 +1,1066 @@
+@import "./fonts.css";
+
+
+
+/* ===========================
+   1. GLOBAL PAGE BACKGROUND
+   =========================== */
+html,
+body {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-weight: var(--fw-heavy) !important;
+  font-family: "Gotham", sans-serif;
+}
+
+
+/* ===========================
+   1. Custom Colors & Variables
+   =========================== */
+:root {
+  --accent-purple: #c6aac6;
+  --primary-pink: #e91e63;
+  --primary-dark: #2c0f29;
+  --secondary-dark: #170617;
+  --status-text-color: #8f618f;
+
+  /* Font Weights */
+  --fw-thin: 200;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-heavy: 900;
+}
+/* ===========================
+   Why Make Section (Exact)
+   =========================== */
+
+.why-make-section-custom {
+  background-color: #402640;
+  min-height: 25.31rem; /* 405px */
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 13.5rem 1.25rem 10.5rem !important;
+}
+
+/* ---------- Image Stack ---------- */
+
+@media (min-width: 62rem) {
+  .pdf-image-wrapper-large {
+    position: relative;
+    flex-shrink: 0;
+    width: 25rem;
+    height: 14.66rem;
+    display: block;
+  }
+
+  .pdf-union-layer-large {
+    position: absolute;
+    width: 21.75rem;
+    height: 14.35rem;
+    left: 0;
+    top: 0.13rem;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}
+
+.pdf-union-img {
+  width: 100%;
+  /* height: 100%; */
+  /* backdrop-filter: blur(5.5625rem); */
+  /* border-radius: 0.75rem; */
+}
+
+.pdf-icon-layer-large {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  left: 2rem;
+  top: 0;
+  z-index: 1;
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* ---------- Text Column ---------- */
+
+.pdf-text-col-fixed {
+  max-width: 52.93rem; /* 847px */
+  margin-left: -1.75rem; /* preserved exactly as requested */
+}
+
+/* ---------- Title ---------- */
+
+.why-title {
+  font-family: "Gotham", sans-serif;
+}
+
+.why-title-accent {
+  color: #c6aac6;
+}
+
+/* ---------- Paragraph Typography ---------- */
+
+.why-paragraph {
+  font-family: "Gotham", sans-serif;
+  font-weight: 200;
+  font-size: 1rem; /* 16px */
+  line-height: 1.75rem; /* 28px */
+  letter-spacing: 0.0125rem;
+  color: rgba(255, 255, 255, 0.75);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin-bottom: 1rem; /* matches mb-3 */
+}
+
+/* ===========================
+   2. Override Bootstrap bg-* colors
+   =========================== */
+.bg-dark {
+  background-color: var(--primary-dark) !important;
+}
+.bg-purple {
+  background-color: var(--accent-purple) !important;
+}
+
+.bg-black {
+  background-color: var(--secondary-dark) !important;
+}
+
+/* Global section padding (160px → 10rem, 20px → 1.25rem) */
+.section {
+  padding: 1.25rem 13.5rem;
+}
+.description-text p {
+  font-size: 1rem; /* Reduced font size to match your design specs */
+  font-family: "Gotham", sans-serif;
+  line-height: 1.6;
+  font-weight: 200;
+  letter-spacing: 0px;
+}
+
+/* ===========================
+   3. Hero Section
+   =========================== */
+.hero-master {
+  position: relative;
+  background: linear-gradient(135deg, #3a1635 0%, #2c0f29 50%, #170617 100%);
+}
+
+/* Large hero image (750px → 46.875rem) */
+.hero-img-large {
+  position: absolute;
+  height: 43rem;
+  width: 43.875rem;
+  left: 40rem; /* 622px → 38.875rem */
+  top: -3.8125rem; /* 45px → 2.8125rem */
+  max-width: none;
+  opacity: 0.85;
+  z-index: 1;
+  filter: brightness(1.2) contrast(1.05);
+}
+.hero-eyebrow {
+  font-family: "Gotham", sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.625rem; /* 26px */
+  letter-spacing: 0;
+}
+.hero-title {
+  font-family: "Gotham", sans-serif;
+  font-weight: 800;
+  font-size: 3.125rem; /* 50px */
+  line-height: 3.375rem; /* 54px */
+  letter-spacing: 0;
+}
+
+/* ===========================
+   5. CTA PILL DESIGN (Improved)
+   =========================== */
+
+/* Desktop view: One smooth pill */
+.cta-pill-container {
+  max-width: 33.125rem;
+  height: 4rem;
+  background: #ffffff;
+  border-radius: 5.0625rem;
+  padding: 0.125rem;
+  display: flex;
+  align-items: center;
+  border: 0.1875rem solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cta-input {
+  border: none !important;
+  background: transparent !important;
+  height: 100%;
+  flex-grow: 1;
+  color: #333;
+  font-size: 1rem;
+  padding-left: 1.625rem !important;
+}
+
+.cta-input:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+.cta-title-exact {
+  font-family: "GothamBold", sans-serif;
+  font-weight: 900;
+  font-size: 1.75rem; /* ~28px */
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center; /* Center on mobile */
+  display: block;
+}
+
+.btn-cta-submit {
+  background-color: var(--primary-pink);
+  color: white !important;
+  border-radius: 5.0625rem !important;
+  height: 3.75rem;
+  padding: 0 1.5rem !important;
+  font-weight: 700;
+  border: none;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+/* ===========================
+   FEATURES — DESKTOP (UNCHANGED)
+   =========================== */
+
+.features-hero {
+  background-color: #310f2b;
+}
+
+/* Title — EXACT desktop values */
+.features-title {
+  font-family: "Gotham", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+
+/* Floating image — EXACT position */
+.features-float-img {
+  top: -4.0625rem;
+  right: -4.6875rem;
+}
+.features-bullets {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap; /* desktop stays single row */
+}
+
+.features-bullet-item {
+  display: flex;
+  align-items: center;
+}
+/* Bullets — EXACT desktop behavior */
+.bullet-text {
+  font-size: 1rem;
+  font-family: "Gotham", sans-serif;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  margin: 0 1.25rem;
+}
+
+.features-divider {
+  height: 1.7rem;
+  width: 1px;
+  opacity: 0.09;
+  margin: 0 20px;
+}
+/* Mobile & Tablet Fix */
+@media (max-width: 991px) {
+  /* Remove py-5 from section */
+  .features-hero {
+    padding-top: 2.1875rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Remove mb-5 from title wrapper */
+  .features-hero .text-center.mb-5 {
+    margin-bottom: 8 !important;
+  }
+  /* Remove mt-5 from row */
+  .features-hero .row.mt-5 {
+    margin-top: 0 !important;
+  }
+  .features-title {
+    font-size: 1.75rem;     /* ~28px */
+    line-height: 2.1rem;   /* ~34px */
+  }
+  .features-bullets {
+    /* Forces bullets to stack vertically or wrap if they are short */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-bullet-item {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .bullet-hash {
+    font-size: 0.875rem;
+  }
+
+  .bullet-text {
+    font-size: 0.875rem;   /* 14px */
+    line-height: 1.4rem;
+  }
+  .features-float-img {
+    display: block !important; /* override d-none */
+    position: static;          /* prevent overlap on mobile */
+    margin: 1.5rem auto 0;     /* center under title */
+    text-align: center;
+  }
+
+  /* Floating image — scale down */
+  .features-float-img img {
+    width: 5.5rem;        /* ~72px */
+    height: auto;
+  }
+
+  /* Adjust position so it hugs the title */
+  .features-float-img {
+    top: -4.25rem;
+    right: -3.5rem;
+  }
+}
+
+/* Desktop Logic */
+@media (min-width: 992px) {
+  .features-bullets {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .bullet-text {
+    white-space: nowrap;
+  }
+}
+/* ===========================
+   FEATURES DESCRIPTION — DESKTOP
+   =========================== */
+
+/* ===========================
+   FEATURES DESCRIPTION TEXT
+   Base / Desktop (≥ 1400px)
+=========================== */
+.features-description-text {
+  font-family: "Gotham", sans-serif;
+  font-weight: 200; /* Light */
+  font-size: 1rem; /* 16px */
+  line-height: 1.75rem; /* 28px */
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.features-description-text strong {
+  font-weight: 400; /* Medium */
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive adjustments using rems + Bootstrap classes */
+@media (max-width: 36rem) {
+  .hero-title {
+    font-size: 1.9rem; /* 32px */
+    line-height: 2.25rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.9rem; /* 16px */
+    line-height: 1.5rem;
+  }
+  /* Section padding */
+  .why-make-section-custom {
+    padding: 2rem 1rem !important;
+    min-height: auto;
+  }
+
+  /* Force column stacking */
+  .why-make-section-custom .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Image wrapper */
+  .pdf-image-wrapper-large {
+    position: relative;
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .pdf-union-layer-large {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+
+  .pdf-icon-layer-large {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 0;
+  }
+
+  /* Text column reset */
+  .pdf-text-col-fixed {
+    max-width: 100%;
+    margin-left: 0; /* remove negative margin */
+    margin-top: -3.375rem;
+    padding: 1.125rem;
+  }
+
+  /* Title */
+  .why-title {
+    font-size: 1.5rem; /* smaller title */
+    line-height: 2rem;
+  }
+
+  /* Paragraphs */
+  .why-paragraph {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.625rem;
+  }
+  /* mobile */
+  .features-bullets {
+    flex-wrap: wrap; /* allow wrapping */
+    justify-content: center;
+    row-gap: 0.75rem;
+  }
+
+  .bullet-text {
+    white-space: normal; /* allow line break */
+    margin: 0 0.75rem;
+    text-align: center;
+  }
+
+  .features-divider {
+    display: none !important; /* no vertical divider on mobile */
+  }
+  .features-description-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .features-description-text {
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.375rem; /* 22px */
+  }
+  .features-description-text strong {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 36.063rem) and (max-width: 62rem) {
+  .hero-title {
+    font-size: 2.5rem; /* 40px */
+    line-height: 2.75rem;
+  }
+  .why-make-section-custom {
+    padding: 2.5rem 2rem !important;
+    min-height: auto;
+  }
+
+  .pdf-text-col-fixed {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .pdf-image-wrapper-large {
+    width: 20rem;
+    margin-bottom: 2rem;
+  }
+  /* tablet */
+  .features-bullets {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  .bullet-text {
+    white-space: normal;
+    margin: 0 1rem;
+  }
+
+  .features-divider {
+    display: none !important;
+  }
+  .features-description-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .features-description-text {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5rem; /* 24px */
+  }
+  .features-description-text strong {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 62.063rem) and (max-width: 87.438rem) {
+  /* laptop */
+  .features-bullets {
+    flex-wrap: nowrap;
+  }
+
+  .bullet-text {
+    white-space: nowrap;
+  }
+
+  .features-divider {
+    display: block;
+  }
+  .features-description-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .features-description-text {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.625rem; /* 26px */
+  }
+  .features-description-text strong {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+  }
+}
+
+/* --- Early Access Layout --- */
+
+.ea-card-row {
+  display: flex;
+  gap: 0.9375rem;
+  margin-top: 2.5rem;
+}
+.features-intro {
+  font-family: "Gotham", sans-serif;
+  font-weight: 200;
+  font-size: 1rem; /* 16px */
+  line-height: 1.75rem; /* 28px / 16px = 1.75 */
+  letter-spacing: 0;
+  margin-top: 2rem;
+}
+
+
+
+.beta-accent {
+  color: var(--accent-purple);
+}
+
+/* White Container Styles */
+.beta-form-container-white {
+  width: 37.5rem; /* 600px in rem */
+  height: 3.5rem; /* 56px in rem */
+  background-color: #ffffff; /* Solid white background as requested */
+  border-radius: 5.0625rem; /* 81px in rem */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.188rem 0.188rem 0.188rem 1.625rem; /* 3px gap ensures pink button doesn't touch edges */
+  box-shadow: 0 0.25rem 0.938rem rgba(0, 0, 0, 0.2);
+}
+
+/* Dark text for white background */
+.beta-input-dark {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #333333; /* Dark text for readability on white */
+  font-size: 1rem;
+  width: 60%;
+  font-family: "GothamBook", sans-serif;
+}
+
+.beta-input-dark::placeholder {
+  color: #181818;
+}
+
+.pill-card {
+  width: 23.958rem;
+  height: 5.5rem;
+  border: 0.1875rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 7.625rem;
+  padding: 1.375rem 1.875rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+/* Badge styling inside card */
+.pill-badge {
+  font-family: "Gotham", sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.75rem; /* 28px */
+  letter-spacing: 0;
+  text-transform: none; /* Keep as-is */
+  display: inline-block;
+  padding: 0.5rem 1.5rem; /* 14px padding in rem */
+  border-radius: 3.125rem;
+  margin-right: 1.25rem; /* 20px in rem */
+  white-space: nowrap;
+}
+
+.badge-released {
+  background-color: #c6aac6;
+  color: #000000;
+}
+
+.badge-coming {
+  background-color: #331433;
+
+  color: #c6aac6;
+}
+
+.pill-img {
+  /* height: 22px; */
+  width: auto;
+}
+/* Heading: 30px Gotham Black */
+.beta-program-rectangle {
+  /* This breaks the element out of a centered container to fill the screen */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background-color: #1706174d !important;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hero-rectangle {
+  /* This breaks the element out of a centered container to fill the screen */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: linear-gradient(
+    90deg,
+    #8e608e 28.16%,
+    #402640 67.82%,
+    #371a34 83.75%
+  );
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Ensure the form inside doesn't stretch to the screen edges */
+.beta-content-wrapper {
+  max-width: 1200px; /* Or whatever your site's content width is */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.beta-heading {
+  font-family: "Gotham", sans-serif;
+  font-weight: 800;
+  font-size: 1.875rem; /* 30px in rem */
+  line-height: 2.125rem; /* 34px in rem */
+  letter-spacing: 0rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+
+/* Form Container: 600x56 with 3px border */
+.beta-form-container {
+  width: 37.5rem; /* 600px in rem */
+  height: 3.5rem; /* 56px in rem */
+  background: transparent;
+  border: 0.1875rem solid #ffffff; /* Exact 3px border-width */
+  border-radius: 5.0625rem; /* Exact border-radius */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.188rem 0.188rem 0.188rem 1.625rem; /* 3px top/right/bottom, 26px left in rem */
+  overflow: hidden;
+}
+
+/* Input Field */
+.beta-input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "GothamBook", sans-serif;
+  font-size: 1rem;
+  width: 60%;
+  outline: none;
+}
+
+.beta-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button: Tucked inside the border padding */
+.beta-btn {
+  height: 100%; /* Fills the 56px minus the 3px padding */
+  padding: 0 3rem;
+  background-color: #e91e63; /* Your brand pink/red */
+  color: #ffffff;
+  border: none;
+  border-radius: 5.0625rem;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.beta-btn:hover {
+  background-color: #d81b60;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 40.625rem) {
+  .beta-form-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
+    gap: 0.938rem;
+  }
+  .beta-btn {
+    width: 100%;
+    height: 3.125rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 87.5rem) {
+  .features-bullets {
+    flex-wrap: nowrap;
+  }
+  .bullet-text {
+    white-space: nowrap;
+  }
+  .ea-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pill-card {
+    width: 100%;
+    max-width: 23.938rem;
+  }
+}
+
+/* ===========================
+   6. Navbar Polish (Figma Exact)
+   =========================== */
+
+/* Remove the duplicate .nav-link-custom block and use this one: */
+.navbar{
+  background: linear-gradient(135deg, #3a1635 0%, #2c0f29 50%, #170617 100%);
+}
+.nav-link-custom {
+  font-family: "Gotham", sans-serif;
+  font-size: 0.6875rem !important; /* Figma 11px */
+  font-weight: 600 !important; /* Figma 700 weight */
+  line-height: 100% !important; /* Figma 100% height */
+  letter-spacing: 0rem;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-logo {
+  height: 0.89rem; /* Figma Height */
+  width: auto;
+  display: block;
+}
+
+/* Fix for mobile menu positioning */
+#mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-dark);
+  z-index: 999;
+}
+#mobileMenu .nav-link {
+    font-family: "Gotham", sans-serif;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+
+/* ===========================
+   7. Buttons & Text
+   =========================== */
+.text-accent {
+  color: var(--accent-purple);
+}
+
+
+
+
+
+/* ===========================
+   9. Max-width Utilities
+   =========================== */
+.max-w-md {
+  max-width: 31.25rem; /* 500px */
+}
+
+.max-w-lg {
+  max-width: 50rem; /* 800px */
+}
+/* ===========================
+   12. SPECIFIC DEVICE BREAKPOINTS
+   =========================== */
+
+/* --- 1. MOBILE DEVICES (Up to 576px) --- */
+@media (max-width: 36rem) {
+  .ea-card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.938rem;
+  }
+  .features-intro {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5rem; /* 24px */
+  }
+  .pill-card {
+    width: 100%;
+    max-width: 23.875rem;
+    height: 6.375rem;
+  }
+  /* Fixed White Pill for Mobile */
+  .beta-form-container-white {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
+    gap: 0.625rem;
+  }
+  .beta-input-dark {
+    width: 100%;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+  .beta-btn {
+    width: 100%;
+    height: 3.125rem;
+  }
+}
+
+/* --- 2. TABLETS (577px to 992px) --- */
+@media (min-width: 36.063rem) and (max-width: 62rem) {
+  .ea-card-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pill-card {
+    width: 45%; /* Two cards per row */
+  }
+  .beta-form-container-white {
+    width: 90%;
+    max-width: 31.25rem;
+  }
+}
+
+/* --- 3. LAPTOPS / LARGE TABLETS (993px to 1399px) --- */
+@media (min-width: 62.063rem) and (max-width: 87.438rem) {
+  .ea-card-row {
+    justify-content: space-between;
+  }
+  .pill-card {
+    width: 31%; /* Three cards per row */
+  }
+}
+
+/* --- 4. ULTRA-WIDE DESKTOP (1400px and up) --- */
+@media (min-width: 87.5rem) {
+  .beta-form-container-white {
+    width: 37.5rem;
+    height: 3.5rem;
+  }
+}
+/* ===========================
+   10. Responsive Adjustments
+   =========================== */
+@media (max-width: 48rem) {
+  /* 768px */
+
+  .rounded-pill-start,
+  .rounded-pill-end {
+    border-radius: 3.125rem !important; /* 50px */
+  }
+
+  .rounded-pill-start {
+    margin-bottom: 0.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+    background: transparent !important;
+  }
+
+  .input-group > .form-control,
+  .input-group > .btn {
+    width: 100%;
+    border-radius: 3.125rem !important;
+  }
+
+  .img-fluid {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  
+
+  .section {
+    padding: 0.25rem 1.5rem;
+  }
+
+  /* Change the container to be invisible on mobile so items can breathe */
+  .cta-pill-container {
+    height: auto;
+    flex-direction: column;
+    background: transparent;
+    padding: 0;
+    gap: 0.75rem; /* Space between input and button */
+  }
+  .cta-title-exact {
+    font-size: 2.125rem; /* ~34px */
+    text-align: left; /* Align left as screen grows */
+  }
+
+  /* Make the input its own nice white pill */
+  .cta-input {
+    background: #ffffff !important;
+    border-radius: 3.125rem !important;
+    height: 3.75rem;
+    width: 100%;
+    padding: 0 1.563rem !important;
+    box-shadow: 0 0.25rem 0.938rem rgba(0, 0, 0, 0.1);
+  }
+
+  /* Make the button its own nice pink pill */
+  .btn-cta-submit {
+    width: 100%;
+    height: 3.75rem;
+    font-size: 1.125rem;
+    box-shadow: 0 0.25rem 0.938rem rgba(233, 30, 99, 0.3);
+  }
+
+  /* Fix the "Coming Soon" area for mobile */
+  .status-group {
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  /* Hero Image adjustment */
+  .hero-img-large {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    opacity: 1;
+
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 87.5rem) {
+  /* 1400px */
+  .min-vh-75 {
+    min-height: 75vh;
+  }
+
+  .col-xxl-2 {
+    width: 16.666%;
+  }
+  .cta-title-exact {
+    /* Maintain design but perhaps add more spacing if needed */
+    margin-bottom: 1rem;
+  }
+  .cta-pill-container {
+    max-width: 33.125rem; /* 530px */
+    height: 4rem; /* 64px */
+    background: #ffffff;
+    border-radius: 5.0625rem; /* 81px */
+
+    /* YOUR NEW BORDER HERE */
+    border: 0.1875rem solid #c6aac6;
+
+    padding: 0.25rem; /* Keeps button from touching border */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  /* Optional: Add a subtle glow when the user clicks inside */
+  .cta-pill-container:focus-within {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0.625rem rgba(198, 170, 198, 0.4);
+  }
+}
+
+@media (min-width: 62rem) {
+  /* 992px */
+  .features-section .position-absolute {
+    top: -2rem;
+    right: -2rem;
+  }
+  #mobileMenu {
+    display: none !important;
+  }
+  .cta-title-exact {
+    font-size: 2.5rem; /* EXACTly 40px */
+    line-height: 2.75rem; /* EXACTly 44px */
+    width: 29.9375rem; /* EXACTly 479px */
+    height: 2.75rem; /* EXACTly 44px */
+    letter-spacing: 0;
+    /* Ensure it behaves like a block to respect width/height */
+    display: block;
+  }
+}
+
+/* ===========================
+   11. Print Styles
+   =========================== */
+@media print {
+  * {
+    background: none !important;
+    color: #000 !important;
+  }
+}
+

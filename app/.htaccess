@@ -1,0 +1,40 @@
+# ==============================
+# 1. ENABLE EXPIRES / CACHING
+# ==============================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML - short cache
+    ExpiresByType text/html "access plus 5 minutes"
+
+    # CSS & JS
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Images
+    ExpiresByType image/webp "access plus 6 months"
+    ExpiresByType image/png  "access plus 6 months"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/svg+xml "access plus 6 months"
+
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff  "access plus 1 year"
+</IfModule>
+
+# ==============================
+# 2. ADD CACHE-CONTROL HEADERS
+# ==============================
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    <FilesMatch "\.(webp|png|jpg|jpeg|svg)$">
+        Header set Cache-Control "public, max-age=15552000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(woff2|woff)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
