@@ -1,81 +1,145 @@
-# IronPDF C++ Beta Program
+# QA / QC CHECKLIST — Frontend-Focused (CodeIgniter)
 
-A responsive, production-ready webpage for the IronPDF C++ Beta Software Program, implemented using **CodeIgniter 4**, **Bootstrap 5**, and **Vite**.
+**Project Path:** `https://github.com/kayzinkhaing/ironpdf-test`
 
-## 🚀 Project Overview
+This checklist documents the self-review, testing, and validation steps performed to ensure production-quality output aligned with the challenge requirements.
 
-This project is a pixel-perfect implementation of the provided Figma design using **HTML5, Bootstrap 5, custom modular CSS, and minimal JavaScript**, integrated into a **CodeIgniter MVC architecture**. It demonstrates responsive design, performance optimization, accessibility best practices, and modern frontend tooling with Vite.
+---
 
-## 🛠️ Technology Stack
+## 1. Pixel-Perfect Validation (Figma vs Implementation)
 
-### Frontend
+* [ ] Compare layout spacing, padding, margins against Figma using browser dev tools
+* [ ] Validate grid alignment and container widths at key breakpoints
+* [ ] Confirm consistent vertical rhythm (section spacing, line heights)
+* [ ] Check icon and image positioning accuracy
+* [ ] Ensure no unintended overflow or layout shift
 
-* HTML5 (semantic markup)
-* CSS3 + Bootstrap 5.3.2
-* JavaScript ES6+ (vanilla, minimal jQuery)
-* Vite for bundling, HMR, and optimized builds
-* Font Awesome 6 for icons
-* Gotham font family with system font fallbacks
+**Tools:** Chrome DevTools, Figma Inspect Panel
 
-### Backend
+---
 
-* CodeIgniter 4 (PHP framework)
-* PHP 7.4+ (compatible with 8.x)
-* Apache / Nginx web server
-* MySQL (optional for future use)
+## 2. Typography Accuracy
 
-### Development Tools
+* [ ] Font family matches Figma (custom font loaded correctly)
+* [ ] Font sizes and weights match design specs
+* [ ] Line-height and letter-spacing verified
+* [ ] Heading hierarchy correct (H1 → H6)
+* [ ] Text rendering consistent across browsers
 
-* Git for version control
-* Composer for PHP dependencies
-* npm for frontend dependencies
-* Lighthouse for performance auditing
-* axe DevTools for accessibility testing
+---
 
-## 📦 Setup Instructions
+## 3. Responsive Behaviour & Breakpoints
 
-1. Clone or extract the project into:
-   `C:\xampp\htdocs\ironpdf-test`
-2. Start Apache via XAMPP
-3. Install PHP dependencies:
+* [ ] Mobile-first responsiveness implemented
+* [ ] Layout adapts correctly at common breakpoints:
 
-   ```bash
-   composer install
-   ```
-4. Serve the CodeIgniter app:
+  * 320px / 375px (small mobile)
+  * 768px (tablet)
+  * 1024px (small desktop)
+  * 1440px+ (large screens)
+* [ ] Navigation switches correctly between desktop and mobile
+* [ ] Images scale without distortion
+* [ ] No horizontal scrolling on mobile
 
-   ```bash
-   php spark serve
-   ```
-5. Install frontend dependencies:
+---
 
-   ```bash
-   npm install
-   ```
-6. Build frontend assets:
+## 4. Cross-Browser Testing
 
-   ```bash
-   npm run build
-   ```
-7. Access the project via:
-   `http://localhost:8080` (or the port shown in `php spark serve`)
+* [ ] Chrome (latest) — fully tested
+* [ ] Firefox (latest) — layout & font consistency verified
+* [ ] Safari (if available) — basic layout and typography verified
+* [ ] No browser-specific CSS or JS errors
 
-## ✅ Key Features
+---
 
-* Pixel-perfect responsive layout matching Figma design
-* Optimized for Core Web Vitals (LCP, FID, CLS)
-* Accessibility (WCAG 2.1 AA) and semantic HTML
-* SEO-friendly with meta tags, heading hierarchy, and alt text
-* Cross-browser compatibility (Chrome, Firefox, Safari, Edge)
-* Performance budget-aware (<770KB total page weight)
-* Clean MVC structure with controllers, views, and organized assets
-* Vite for modern JS bundling and fast development
+## 5. Semantic HTML & Accessibility (a11y)
 
-## 🗂️ Notes
+* [ ] Semantic elements used correctly (`<nav>`, `<header>`, `<main>`, `<section>`, `<footer>`)
+* [ ] Navigation links use `<a>` (not `<span>`)
+* [ ] Images include meaningful `alt` attributes
+* [ ] Buttons use `<button>` elements
+* [ ] Keyboard navigation works (Tab / Shift+Tab)
+* [ ] ARIA attributes applied only where necessary
+* [ ] Color contrast meets WCAG AA guidelines
 
-* Mobile design was not provided; responsive behavior implemented based on best practices
-* Vite ensures fast rebuilds, optimized assets, and modern JS features
-* Project follows CodeIgniter best practices with separation of concerns
+---
+
+## 6. SEO Validation
+
+* [ ] `<title>` and meta description present and relevant
+* [ ] Single H1 per page
+* [ ] Proper heading hierarchy
+* [ ] Alt text for all informative images
+* [ ] Clean, readable URLs (CodeIgniter routing)
+* [ ] No duplicate meta tags
+
+---
+
+## 7. Performance Optimization (Core Web Vitals)
+
+### 7.1 JavaScript & CSS
+
+* [ ] CSS and JS bundles minified
+* [ ] Code splitting applied where applicable
+* [ ] Tree-shaking enabled (unused code removed)
+* [ ] jQuery used only when necessary
+
+### 7.2 Lazy Loading
+
+* [ ] Images use `loading="lazy"`
+* [ ] Non-critical components loaded lazily
+* [ ] Routes/components deferred where possible
+
+### 7.3 Images & Assets
+
+* [ ] Images optimized and resized appropriately
+* [ ] Modern formats used (WebP)
+* [ ] No oversized assets
+
+### 7.4 Caching & Delivery
+
+* [ ] Browser caching headers configured (`Cache-Control`, `Expires`)
+* [ ] Gzip / Brotli compression enabled
+* [ ] Assets CDN-ready (cacheable, fingerprinted)
+
+---
+
+## 8. Lighthouse & Metrics
+
+* [ ] Lighthouse Performance score ≥ 90
+* [ ] Lighthouse Accessibility score ≥ 90
+* [ ] Lighthouse Best Practices score ≥ 90
+* [ ] Lighthouse SEO score ≥ 90
+
+**Core Web Vitals Targets:**
+
+* LCP ≤ 2.5s
+* CLS ≤ 0.1
+* FID / INP within acceptable range
+
+**Tools:** Lighthouse, Chrome DevTools, Web Vitals overlay
+
+---
+
+## 9. CodeIgniter Implementation Review
+
+* [ ] MVC structure respected
+* [ ] Controllers handle data logic only
+* [ ] Views remain clean and presentation-focused
+* [ ] Data passed from controller to view
+* [ ] JSON file used as simulated data source
+* [ ] Assets organized under `/public` or `/assets`
+* [ ] Routing configured correctly
+
+---
+
+## 10. Code Quality & Maintainability
+
+* [ ] Clean, readable, well-commented code
+* [ ] Modular custom CSS layered over Bootstrap
+* [ ] No inline JS except where unavoidable
+* [ ] Consistent naming conventions
+* [ ] No unused CSS or JS
 
 ---
 
